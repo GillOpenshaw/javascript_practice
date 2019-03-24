@@ -12,7 +12,7 @@ const {
 } = require("../challenges/week1");
 
 describe("capitalize", () => {
-  test("returns a capitalized string", () => {
+  test.only("returns a capitalized string", () => {
     expect(capitalize("hello")).toBe("Hello");
   });
 
