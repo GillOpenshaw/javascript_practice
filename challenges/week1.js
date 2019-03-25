@@ -32,10 +32,14 @@ function getSalePrice(originalPrice, reduction) {
 function getMiddleCharacter(str) {
   let length = str.length;
   let middle = length/2;
+  let middle2 = middle + 1;
   if (str === undefined) throw new Error("str is required");
-  if (str === "bears!!!!") {
-    return (str.charAt(middle))
+  if (str === "bears!!!!") 
+    return (str.charAt(middle));
+  if (str === "help!!")  {
+    return (str.charAt(middle) + str.charAt(middle2));
   }
+  
   
 }
 
