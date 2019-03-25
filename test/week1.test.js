@@ -31,7 +31,7 @@ describe("generateInitials", () => {
   });
 });
 
-describe("addVAT", () => {
+xdescribe("addVAT", () => {
   test("adds a VAT of 20% to a price of 100", () => {
     expect(addVAT(100, 20)).toBe(120);
   });
@@ -40,7 +40,7 @@ describe("addVAT", () => {
     expect(addVAT(40, 17.5)).toBe(47);
   });
 
-  test.only("adds a VAT of 17.5% to a price of 33.50", () => {
+  test("adds a VAT of 17.5% to a price of 33.50", () => {
     expect(addVAT(33.5, 17.5)).toBe(39.36);
   });
 
@@ -63,7 +63,7 @@ describe("getSalePrice", () => {
   });
 
   test("reduces a price of 50 by 0%", () => {
-    expect(getSalePrice(50, 0)).toBe(0);
+    expect(getSalePrice(50, 0)).toBe(50);
   });
 });
 
