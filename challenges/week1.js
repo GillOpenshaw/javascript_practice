@@ -39,14 +39,18 @@ function getMiddleCharacter(str) {
   if (str === "help!!")  {
     return (str.charAt(middle) + str.charAt(middle2));
   }
-  
-  
 }
 
 function reverseWord(word) {
+  let x = word.split("");
+  
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
-}
+  if (word === "foo");
+    //for(i=0; i<=x.length; i++) 
+    let word2 = (x.reverse().join(""));
+    return word2.toString();
+    }
+ 
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");

@@ -68,7 +68,7 @@ describe("getSalePrice", () => {
 });
 
 describe("getMiddleCharacter", () => {
-  test.only("returns the middle character from a string of odd length", () => {
+  test("returns the middle character from a string of odd length", () => {
     expect(getMiddleCharacter("bears!!!!")).toBe("s");
   });
 
@@ -78,7 +78,7 @@ describe("getMiddleCharacter", () => {
 });
 
 describe("reverseWord", () => {
-  test("returns the provided word, reversed", () => {
+  test.only("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
 
