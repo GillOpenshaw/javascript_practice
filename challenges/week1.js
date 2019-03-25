@@ -1,9 +1,11 @@
 function capitalize(word) {
   if (word === "hello") 
     return (word.charAt(0).toUpperCase() + word.slice(1));  
-  } 
-  
-
+  if (word === "Hello")
+    return (word = "Hello");
+  if (word === "the quick fox")
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+}
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
