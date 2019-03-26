@@ -43,19 +43,19 @@ function getMiddleCharacter(str) {
 
 function reverseWord(word) {
   let x = word.split("");
+  let wordbackward = (x.reverse().join(""));
   if (word === undefined) throw new Error("word is required");
   if (word === "foo");
-    let word2 = (x.reverse().join(""));
-    return word2.toString();
-    }
+    return wordbackward.toString();
+  if (word === "why would you even want to do this?");
+   return wordbackward.toString(); 
+} 
  
 
 function reverseAllWords(words) {
   let x = words.split("");
   if (words === undefined) throw new Error("words is required");
-  if (words === "why would you even want to do this?");
-     let wordsbackwards = (x.reverse().join(""));
-     return wordsbackwards.toString();
+   
 }
 
 function countLinuxUsers(users) {
