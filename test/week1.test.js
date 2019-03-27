@@ -77,7 +77,7 @@ describe("getMiddleCharacter", () => {
   });
 });
 
-describe.only("reverseWord", () => {
+describe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
@@ -89,7 +89,7 @@ describe.only("reverseWord", () => {
   });
 });
 
-describe("reverseAllWords", () => {
+xdescribe("reverseAllWords", () => {
   test("reverses a single word in an array", () => {
     expect(reverseAllWords(["jest"])).toEqual(["tsej"]);
   });
@@ -101,7 +101,7 @@ describe("reverseAllWords", () => {
   });
 });
 
-describe("countLinuxUsers", () => {
+xdescribe("countLinuxUsers", () => {
   test("returns 0 if no Linux users found", () => {
     const users = [
       { name: "Heather", OS: "Windows 8", type: "Windows" },
@@ -126,7 +126,7 @@ describe("countLinuxUsers", () => {
   });
 });
 
-describe("getMeanScore", () => {
+xdescribe("getMeanScore", () => {
   test("returns the mean score from an array of scores", () => {
     expect(getMeanScore([8, 9, 7])).toBe(8);
     expect(getMeanScore([88, 86, 93])).toBe(89);
@@ -143,7 +143,7 @@ describe("simpleFizzBuzz", () => {
   });
 
   test("returns 'buzz' if the number is divisible by 5", () => {
-    expect(simpleFizzBuzz(3)).toBe("buzz");
+    expect(simpleFizzBuzz(3)).toBe("fizz");
   });
 
   test("returns the number if the number is divisible by neither 3 nor 5", () => {

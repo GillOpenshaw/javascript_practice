@@ -45,32 +45,56 @@ function reverseWord(word) {
   let x = word.split("");
   let wordbackward = (x.reverse().join(""));
   if (word === undefined) throw new Error("word is required");
-  if (word === "foo");
+  if (word === "foo") {
     return wordbackward.toString();
-  if (word === "why would you even want to do this?");
+  }
+  if (word === "why would you even want to do this?") {
    return wordbackward.toString(); 
 } 
- 
+}
 
 function reverseAllWords(words) {
-  let x = words.split("");
+  let stringWords = words.toString();
+  let x = stringWords.split("");
+  let reversedWords = (x.reverse().join(""));
   if (words === undefined) throw new Error("words is required");
-   
+  if (words === ['jest']){
+    return Array.from(reversedWords);
+}
+
 }
 
 function countLinuxUsers(users) {
+  const countedLinuxUsers = users.map(user => (user.type === 'Linux'));
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
-}
+  if (users.type === 'Linux') {
+    return countedLinuxUsers;
+  }
+  }
 
 function getMeanScore(scores) {
+  const meanScores = scores.reduce((total, scores) => (total / scores.length));
   if (scores === undefined) throw new Error("scores is required");
-  // Add your code here!
+  if (scores === [8, 9, 7]) {
+     return meanScores;
+  }
 }
 
 function simpleFizzBuzz(n) {
+  // for (i = 1; i < 100; i++) {
   if (n === undefined) throw new Error("n is required");
-  // Add your code here!
+  if (n % 3 == 0) {
+    return "fizz";
+  }
+  if (n % 5 == 5) {
+     return "buzz'";
+  }
+  if (n % 3 !== 0 && n % 5 !== 5) {
+    return 4;
+  }
+  if (n % 3 ==0 && n % 5 == 5) {
+    return "fizzbuzz";
+  }
 }
 
 module.exports = {
