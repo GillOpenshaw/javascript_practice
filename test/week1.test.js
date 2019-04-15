@@ -11,7 +11,7 @@ const {
   simpleFizzBuzz
 } = require("../challenges/week1");
 
-describe("capitalize", () => {
+xdescribe("capitalize", () => {
   test("returns a capitalized string", () => {
     expect(capitalize("hello")).toBe("Hello");
   });
@@ -25,7 +25,7 @@ describe("capitalize", () => {
   });
 });
 
-describe("generateInitials", () => {
+xdescribe("generateInitials", () => {
   test("returns the initials of a firstname and surname", () => {
     expect(generateInitials("Frederic", "Bonneville")).toBe("F.B");
   });
@@ -49,7 +49,7 @@ xdescribe("addVAT", () => {
   });
 });
 
-describe("getSalePrice", () => {
+xdescribe("getSalePrice", () => {
   test("reduces a price of 100 by 50%", () => {
     expect(getSalePrice(100, 50)).toBe(50);
   });
@@ -67,7 +67,7 @@ describe("getSalePrice", () => {
   });
 });
 
-describe("getMiddleCharacter", () => {
+xdescribe("getMiddleCharacter", () => {
   test("returns the middle character from a string of odd length", () => {
     expect(getMiddleCharacter("bears!!!!")).toBe("s");
   });
@@ -77,7 +77,7 @@ describe("getMiddleCharacter", () => {
   });
 });
 
-describe("reverseWord", () => {
+xdescribe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
@@ -137,7 +137,7 @@ xdescribe("getMeanScore", () => {
   });
 });
 
-describe("simpleFizzBuzz", () => {
+xdescribe("simpleFizzBuzz", () => {
   test("returns 'fizz' if the number is divisible by 3", () => {
     expect(simpleFizzBuzz(3)).toBe("fizz");
   });
