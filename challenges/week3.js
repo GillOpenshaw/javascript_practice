@@ -71,6 +71,7 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
   // Your code here!
+  else {let intersection = arr1.filter(x => arr2.includes(x));
 }
 /* function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
