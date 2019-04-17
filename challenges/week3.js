@@ -56,7 +56,7 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
-  
+
 }
 /* function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
@@ -71,7 +71,10 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
   // Your code here!
-  else {let intersection = arr1.filter(x => arr2.includes(x));
+  else {
+    let intersection = arr1.filter(x => arr2.includes(x));
+    return intersection;
+  }
 }
 /* function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");

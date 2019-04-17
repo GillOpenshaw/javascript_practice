@@ -1,7 +1,29 @@
+/* Problem with For Loop This returns array with separate elements
+const smallNumbers = [];
 function findSmallNums(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
-}
+  for (let i = 0; i < findSmallNums.length; i++) {
+    const num1 = findSmallNums[i];
+    if (num1 < 1) {
+      smallNumbers.push([num1]);
+    }
+  }
+  return smallNumbers;
+} */
+
+/* Error with [-7, -243]
+let smallNumbers = [];
+
+function findSmallNums(nums) {
+  if (!nums) throw new Error("nums is required");
+  nums.forEach(function(num) {
+    if (num < 1) {
+      smallNumbers.push(num);
+    }
+  });
+  return smallNumbers;
+} */
+
 
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
