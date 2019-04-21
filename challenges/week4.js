@@ -1,15 +1,15 @@
-/* Problem with For Loop This returns array with separate elements
-const smallNumbers = [];
+/* Problem with For Loop This returns array with separate elements */
 function findSmallNums(nums) {
+  const smallNumbers = [];
   if (!nums) throw new Error("nums is required");
-  for (let i = 0; i < findSmallNums.length; i++) {
-    const num1 = findSmallNums[i];
+  for (let i = 0; i < nums.length; i++) {
+    const num1 = nums[i];
     if (num1 < 1) {
-      smallNumbers.push([num1]);
+      smallNumbers.push(num1);
     }
   }
   return smallNumbers;
-} */
+} 
 
 /* Error with [-7, -243]
 let smallNumbers = [];

@@ -26,7 +26,8 @@ console.log(capitaliseLetters);
 restOfLetters = letters[1].slice(1);
 secondJoined = capitaliseLetters + restOfLetters;
 console.log(secondJoined);
-camelCaseWord = firstJoined + secondJoined;*/
+joinedWords = firstJoined + secondJoined;
+console.log(joinedWords);*/
 
 /*letters.forEach(item, index => {
   capitaliseLetters = letters[1].slice(0,1).toUpperCase()
@@ -72,8 +73,13 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr2) throw new Error("arr2 is required");
   // Your code here!
   else {
-    let intersection = arr1.filter(x => arr2.includes(x));
-    return intersection;
+    const arr3 =[];
+    arr1.forEach(function(num) {
+      if (arr2.includes(num) && !arr3.includes(num)){
+        arr3.push(num)
+      }
+    })
+    return arr3.sort();
   }
 }
 /* function duplicateNumbers(arr1, arr2) {
