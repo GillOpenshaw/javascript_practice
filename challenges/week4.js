@@ -1,4 +1,3 @@
-/* Problem with For Loop This returns array with separate elements */
 function findSmallNums(nums) {
   const smallNumbers = [];
   if (!nums) throw new Error("nums is required");
@@ -9,46 +8,70 @@ function findSmallNums(nums) {
     }
   }
   return smallNumbers;
-} 
+}
 
-/* Error with [-7, -243]
-let smallNumbers = [];
-
-function findSmallNums(nums) {
-  if (!nums) throw new Error("nums is required");
-  nums.forEach(function(num) {
-    if (num < 1) {
-      smallNumbers.push(num);
-    }
-  });
-  return smallNumbers;
-} */
-
-
+/* Problem:
+Returns the correct names, but test says not 'to be'
+Also if statement says === "S", but how do you do a test where the expected letter can be changed to "D"? */
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
   // Your code here
+  const nameResults = [];
+  names.map(function (firstLetter) {
+    if (firstLetter[0] === "S") {
+      nameResults.push(firstLetter);
+    }
+  })
+  return nameResults;
 }
 
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
-  // Your code here
+
+  const verbs = [];
+  //for (let i = 0; i < words.length; i++) {
+    words.forEach(function(word){
+    const first3Chars = word.slice(0, 3);
+    if (first3Chars === "to ") {
+      verbs.push(word);
+    }
+  });
+  return verbs;
 }
+
 
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  const integers = [];
+  nums.forEach(function(num) {
+    if (Number.isInteger(num)) {
+      integers.push(num)
+    }
+  })
+  return integers;
 }
 
 function getCities(users) {
   if (!users) throw new Error("users is required");
-  // Your code here
+  const cities = [];
+  for (let i = 0; i < users.length; i++) {
+    const user = users[i];
+    const displayName = user.data.city.displayName;
+    cities.push(displayName);
+  }
+  return cities;
 }
 
+/* Problem - Not rounded to 2 decimal places. Tried .toFixed(2) */
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here
+  const squareRoots = [];
+  nums.forEach(function(num) {
+    const squareRoot = Math.sqrt(num);
+    squareRoots.push(squareRoot);
+  });
+  return squareRoots;
 }
 
 function findSentencesContaining(sentences, str) {
@@ -59,8 +82,19 @@ function findSentencesContaining(sentences, str) {
 
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
-  // Your code here
+  const longestTriangleSides = [];
+  for (let i = 0; i < triangles.length; i++) {
+    const triangle = triangles[i];
+    triangle.sort(function (a, b) {
+      return b - a
+    });
+    const longestSide = triangle[0];
+    longestTriangleSides.push(longestSide);
+  }
+  return longestTriangleSides;
 }
+
+
 
 module.exports = {
   findSmallNums,

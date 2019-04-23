@@ -10,7 +10,7 @@ const {
 } = require("../challenges/week4");
 
 describe("findSmallNums", () => {
-  test.only("returns an array of numbers smaller than 1", () => {
+  test("returns an array of numbers smaller than 1", () => {
     expect(findSmallNums([8, 1, 1.3, 0.9, 0.4, -1])).toEqual([0.9, 0.4, -1]);
     expect(findSmallNums([-7, -243])).toEqual([-7, -243]);
     expect(findSmallNums([100, 88])).toEqual([]);
@@ -31,7 +31,7 @@ xdescribe("findNamesBeginningWith", () => {
   });
 });
 
-xdescribe("findVerbs", () => {
+describe("findVerbs", () => {
   test("returns an array of words that are considered verbs (because they begin with 'to ')", () => {
     const words = [
       "to eat",
@@ -58,7 +58,7 @@ xdescribe("findVerbs", () => {
   });
 });
 
-xdescribe("getIntegers", () => {
+describe("getIntegers", () => {
   test("returns an array containing only integers", () => {
     const nums = [1, 3.5, 2.1, 1, 4, 9];
     expect(getIntegers(nums)).toEqual([1, 1, 4, 9]);
@@ -67,7 +67,7 @@ xdescribe("getIntegers", () => {
   });
 });
 
-xdescribe("getCities", () => {
+describe("getCities", () => {
   test("returns an array of the cities of each user", () => {
     const users = [
       {
@@ -154,7 +154,7 @@ xdescribe("findSentencesContaining", () => {
   });
 });
 
-xdescribe("getLongestSides", () => {
+describe("getLongestSides", () => {
   test("returns the longest side of each set of triangle data", () => {
     const data = [[6, 7, 10], [9, 3, 6], [6, 3, 5], [6, 13, 12], [7, 12, 8]];
     expect(getLongestSides(data)).toEqual([10, 9, 6, 13, 12]);
