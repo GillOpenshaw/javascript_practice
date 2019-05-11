@@ -57,6 +57,17 @@ const reverseNumber = n => {
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
   // Your code here!
+
+  // Initialize Value to 0 as more than one array
+  // Each time the accumulatoe gets first the inital value, then the callback value
+  // Get the current value and add this to the accumulator
+  // Add to an empty array
+  // Return array
+  const nums = arrs.reduce(
+    (accumulator, currentValue) => accumulator.concat(currentValue),
+    []
+  );
+  return nums
 };
 
 const arrShift = arr => {
