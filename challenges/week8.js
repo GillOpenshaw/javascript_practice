@@ -9,7 +9,7 @@ const findNextNumber = (nums, n) => {
   }
   // Struggling on if number is in the last position return null, as trying to compare an index with a number
   // I don't know how to get the value of the index position?
-  
+
   // Find index position of n 
   // const lastNumber = nums.indexOf(n)  -- This gives the index position 6
   // If lastNumber === n then return null
@@ -22,11 +22,36 @@ const findNextNumber = (nums, n) => {
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
+
+  // Set count0 to 0
+  // Set count1 to 0
+  // Loop through searching for each instance of 0
+  // If find a 0, add 1 to count0
+  // Return count1sand0
+  // Loop through searching for each instance of 1
+  // If find a 1, add 1 to count1
+  // Return count1
+
+  let count0 = 0;
+  let count1 = 0;
+  for (let i = 0; i < count1sand0s.length; i++) {
+    if (count1sand0s[i] === 0) {
+      count0 = count0 + 1
+      if (count1sand0s[i] === 1) {
+        count1 = count1 + 1
+      }
+      return count0
+    }
+    return count1
+  }
 };
+
 
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
+  const numberReversed = parseFloat(n.toString().split('').reverse().join(''))
+  return numberReversed
 };
 
 const sumArrays = arrs => {
