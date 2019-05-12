@@ -1,21 +1,16 @@
 const findNextNumber = (nums, n) => {
   const numberPosition = nums.indexOf(n);
   const plusOnePosition = numberPosition + 1
+  const indexLast = nums.length - 1
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
   // Your code here! 
   if (nums.indexOf(n) === -1) {
     return null;
   }
-  // Struggling on if number is in the last position return null, as trying to compare an index with a number
-  // I don't know how to get the value of the index position?
-
-  // Find index position of n 
-  // const lastNumber = nums.indexOf(n)  -- This gives the index position 6
-  // If lastNumber === n then return null
-  // if(lastNumber === n {               --- Won't work as comparing a number and an index position
-  // return null
-  //})
+  if (n === nums[indexLast]) {
+    return null;
+  }
   return nums[plusOnePosition];
 };
 
@@ -81,7 +76,7 @@ const arrShift = arr => {
   // Your code here!
   //Returns defined - can't get it to read swap
   //function swap(arr) {
-    //[arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+  //[arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
   //}
   //return swap[arr]
 
