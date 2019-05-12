@@ -17,28 +17,20 @@ const findNextNumber = (nums, n) => {
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
-
-  // Set count0 to 0
-  // Set count1 to 0
-  // Loop through searching for each instance of 0
-  // If find a 0, add 1 to count0
-  // Return count1sand0
-  // Loop through searching for each instance of 1
-  // If find a 1, add 1 to count1
-  // Return count1
-
-  let count0 = 0;
-  let count1 = 0;
-  for (let i = 0; i < count1sand0s.length; i++) {
-    if (count1sand0s[i] === 0) {
-      count0 = count0 + 1
-      if (count1sand0s[i] === 1) {
-        count1 = count1 + 1
-      }
-      return count0
+  // Returns but in the wrong order i.e. 0:..  1:.., rather than 1:.. 0..
+  let count = {};
+  for (let i = 0; i < str.length; i++) {
+    const num = str[i];
+    if (count[num] === false) {
+      count[num] = 0
     }
-    return count1
+    if (count[num] === undefined) {
+      count[num] = 1;
+    } else {
+      count[num] += 1;
+    }
   }
+  return count
 };
 
 
