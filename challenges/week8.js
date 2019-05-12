@@ -50,6 +50,12 @@ const count1sand0s = str => {
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
+  // Convert number to string so it can be split
+  // Split the string elements
+  // Reverse the string
+  // Join the string elements together
+  // Convert the string back to a number
+  // Return the number
   const numberReversed = parseFloat(n.toString().split('').reverse().join(''))
   return numberReversed
 };
@@ -73,6 +79,12 @@ const sumArrays = arrs => {
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
   // Your code here!
+  //Returns defined - can't get it to read swap
+  //function swap(arr) {
+    //[arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+  //}
+  //return swap[arr]
+
 };
 
 const findNeedle = (haystack, searchTerm) => {
