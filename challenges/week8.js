@@ -1,3 +1,4 @@
+//Pass
 const findNextNumber = (nums, n) => {
   const numberPosition = nums.indexOf(n);
   const plusOnePosition = numberPosition + 1
@@ -33,7 +34,7 @@ const count1sand0s = str => {
   return count
 };
 
-
+// Pass
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
   // Your code here!
@@ -47,9 +48,15 @@ const reverseNumber = n => {
   return numberReversed
 };
 
+// Pass
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
   // Your code here!
+  // Set variable nums to 0 using let as the variable value will change
+  // Loop through arrays
+  // Loop through inner arrays
+  // As each loop passes through add the item to the variable nums
+  // Return nums
   let nums = 0
   arrs.forEach(innerArr => {
     innerArr.forEach(item => {
@@ -58,34 +65,6 @@ const sumArrays = arrs => {
   })
   return (nums)
 };
-  // Firsy Try
-  // Set variable nums to 0
-  // Loop through each number in the array
-  // Add each number to the variable
-  // Return nums
-  /* let nums = 0;
-  arrs.forEach = (num) => {
-    nums = nums + num[i]
-    return (nums)
-  }*/
-
-  // Second Try
-  // Initialize Value to 0 as more than one array
-  // Use Reduce to reduce the array to a single value
-  // Each time the accumulator gets first the inital value, then the callback value
-  // Get the current value and add this to the accumulator
-  // Add to an empty array
-  // Return array 
-  /*const nums = arrs.reduce(
-    (accumulator, currentValue) => accumulator.concat(currentValue),
-    []
-  );
-  return nums*/
-
-  //or
-  /*const nums = arrs.reduce((a,b) => a + b, 0)
-    return(nums)*/
-
 
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
@@ -102,6 +81,13 @@ const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
   // Your code here!
+  for (let searchTerm in haystack) {
+    if (haystack[searchTerm] === "table") {
+      return true
+    } else {
+      return false
+    }
+  }
 };
 
 const getWordFrequencies = str => {
