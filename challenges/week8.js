@@ -50,7 +50,14 @@ const reverseNumber = n => {
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
   // Your code here!
-
+  let nums = 0
+  arrs.forEach(innerArr => {
+    innerArr.forEach(item => {
+      nums = nums + item
+    })
+  })
+  return (nums)
+};
   // Firsy Try
   // Set variable nums to 0
   // Loop through each number in the array
@@ -79,7 +86,7 @@ const sumArrays = arrs => {
   /*const nums = arrs.reduce((a,b) => a + b, 0)
     return(nums)*/
 
-};
+
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
   // Your code here!
