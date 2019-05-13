@@ -51,18 +51,31 @@ const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
   // Your code here!
 
+  // Firsy Try
+  // Set variable nums to 0
+  // Loop through each number in the array
+  // Add each number to the variable
+  // Return nums
+  /* let nums = 0;
+  arrs.forEach = (arrs) => {
+    nums = nums + arrs[i]
+    return (nums)
+  }*/
+
+// Second Try
   // Initialize Value to 0 as more than one array
-  // Each time the accumulatoe gets first the inital value, then the callback value
+  // Use Reduce to reduce the array to a single value
+  // Each time the accumulator gets first the inital value, then the callback value
   // Get the current value and add this to the accumulator
   // Add to an empty array
-  // Return array
-  const nums = arrs.reduce(
+  // Return array 
+  /*const nums = arrs.reduce(
     (accumulator, currentValue) => accumulator.concat(currentValue),
     []
   );
-  return nums
-};
+  return nums*/
 
+  };
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
   // Your code here!
