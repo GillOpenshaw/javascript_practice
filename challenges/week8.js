@@ -57,12 +57,12 @@ const sumArrays = arrs => {
   // Add each number to the variable
   // Return nums
   /* let nums = 0;
-  arrs.forEach = (arrs) => {
-    nums = nums + arrs[i]
+  arrs.forEach = (num) => {
+    nums = nums + num[i]
     return (nums)
   }*/
 
-// Second Try
+  // Second Try
   // Initialize Value to 0 as more than one array
   // Use Reduce to reduce the array to a single value
   // Each time the accumulator gets first the inital value, then the callback value
@@ -75,7 +75,11 @@ const sumArrays = arrs => {
   );
   return nums*/
 
-  };
+  //or
+  /*const nums = arrs.reduce((a,b) => a + b, 0)
+    return(nums)*/
+
+};
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
   // Your code here!
