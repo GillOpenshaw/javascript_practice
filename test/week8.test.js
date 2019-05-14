@@ -68,7 +68,7 @@ xdescribe("sumArrays", () => {
   });
 });
 
-describe.only("arrShift", () => {
+xdescribe("arrShift", () => {
   test("returns an array with the first and last items swapped", () => {
     expect(arrShift([1, 2])).toEqual([2, 1]);
     expect(arrShift([1, 2, 3])).toEqual([3, 2, 1]);
@@ -139,7 +139,7 @@ xdescribe("findNeedle", () => {
   });
 });
 
-xdescribe("getWordFrequencies", () => {
+describe("getWordFrequencies", () => {
   test("returns the frequencies of each word in a string", () => {
     expect(getWordFrequencies("hello world")).toEqual({
       hello: 1,

@@ -15,11 +15,10 @@ const findNextNumber = (nums, n) => {
   return nums[plusOnePosition];
 };
 
-// Not passed as returns in wrong order
+// Not passed for all 1s
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
-  // Returns but in the wrong order i.e. 0:..  1:.., rather than 1:.. 0..
   let count = {};
   for (let i = 0; i < str.length; i++) {
     const num = str[i];
@@ -104,9 +103,24 @@ const findNeedle = (haystack, searchTerm) => {
   }
 };
 
+// Pass in Node.js but not in Visual Studio Code
 const getWordFrequencies = str => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
+  let removePunctuationWord = str.replace(/[\!\,\?]/g, '');
+  let splitWords = removePunctuationWord.split(" ");
+  let uniqueWords = [];
+  for (let i = 0; i < splitWords.length; i++) {
+    const word = splitWords[i].slice(1);
+    const lowerWords = splitWords[i].charAt(0).toLowerCase();
+    const words = lowerWords + word;
+    if (uniqueWords[words] === undefined) {
+      uniqueWords[words] = 1;
+    } else {
+      uniqueWords[words] += 1;
+    }
+  }
+  return uniqueWords
 };
 
 module.exports = {
