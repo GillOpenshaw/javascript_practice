@@ -68,7 +68,7 @@ xdescribe("sumArrays", () => {
   });
 });
 
-xdescribe("arrShift", () => {
+describe.only("arrShift", () => {
   test("returns an array with the first and last items swapped", () => {
     expect(arrShift([1, 2])).toEqual([2, 1]);
     expect(arrShift([1, 2, 3])).toEqual([3, 2, 1]);
@@ -81,7 +81,7 @@ xdescribe("arrShift", () => {
   });
 });
 
-describe.only("findNeedle", () => {
+xdescribe("findNeedle", () => {
   test("returns true if any of the properties of an object contain the specified string", () => {
     const obj1 = {
       name: "LINNMON",

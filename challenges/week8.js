@@ -15,6 +15,7 @@ const findNextNumber = (nums, n) => {
   return nums[plusOnePosition];
 };
 
+// Not passed as returns in wrong order
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
   // Your code here!
@@ -66,23 +67,36 @@ const sumArrays = arrs => {
   return (nums)
 };
 
+// Pass
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
   // Your code here!
-  //Returns defined - can't get it to read swap
-  //function swap(arr) {
-  //[arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
-  //}
-  //return swap[arr]
-
+  // If array length is less than 2, return the original array
+  // Save first item to a variable firstItem using .shift()
+  // Save last item to a variable lastItem using .pop()
+  // Add the lastItem to the first position using .unshift()
+  // Add the firstItem to the last position using .push()
+  // Return the array
+  if (arr.length < 2) {
+    return arr
+  }
+  const firstItem = arr.shift()
+  const lastItem = arr.pop()
+  let newArray = arr
+  newArray.unshift(lastItem)
+  newArray.push(firstItem)
+  return newArray
 };
 
+
+// Not passed as not sure how to link searchTerm to any part of the searchTerm such as "table"
 const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
   // Your code here!
   for (let searchTerm in haystack) {
-    if (haystack[searchTerm] === "table") {
+    if (haystack[searchTerm] === "searchTerm") {
+      // also tried if(haystack[searchTerm].includes("searchTerm")) {
       return true
     } else {
       return false
