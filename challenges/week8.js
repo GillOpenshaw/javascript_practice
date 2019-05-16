@@ -18,20 +18,21 @@ const findNextNumber = (nums, n) => {
 // Not passed for all 1s
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
-  let count = {};
+  let ones = 0;
+  let zeros = 0;
   for (let i = 0; i < str.length; i++) {
     const num = str[i];
-    if (count[num] === false) {
-      count[num] = 0
+    if (num === "1") {
+      ones ++;
     }
-    if (count[num] === undefined) {
-      count[num] = 1;
-    } else {
-      count[num] += 1;
+    else if (num === '0') {
+      zeros ++;
     }
   }
-  return count
+  return {
+    1: ones,
+    0: zeros
+  }
 };
 
 // Pass
