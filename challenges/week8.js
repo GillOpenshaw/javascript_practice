@@ -15,18 +15,24 @@ const findNextNumber = (nums, n) => {
   return nums[plusOnePosition];
 };
 
-// Not passed for all 1s
+// Pass
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
+  // Create a variable ones and set to 0
+  // Create a variable zeros and set to 0
+  // Loop through checking for 1s and os
+  // If a 1 (String) is found add 1 to variable ones
+  // If a 0 (String) is found add 1 to variable zeros
+  // Return ones and zeros as an array
   let ones = 0;
   let zeros = 0;
   for (let i = 0; i < str.length; i++) {
     const num = str[i];
     if (num === "1") {
-      ones ++;
+      ones++;
     }
     else if (num === '0') {
-      zeros ++;
+      zeros++;
     }
   }
   return {
@@ -89,28 +95,28 @@ const arrShift = arr => {
 };
 
 
-// Not passed as not sure how to link searchTerm to any part of the searchTerm such as "table"
+// Pass
 const findNeedle = (haystack, searchTerm) => {
   if (haystack === undefined) throw new Error("haystack is required");
   if (searchTerm === undefined) throw new Error("searchTerm is required");
-  // Your code here!
-  for (let searchTerm in haystack) {
-    if (haystack[searchTerm] === "searchTerm") {
-      // also tried if(haystack[searchTerm].includes("searchTerm")) {
-      return true
-    } else {
-      return false
+  searchTerm = searchTerm.toLowerCase();
+  for (let key in haystack) {
+    const value = haystack[key];
+    if (typeof value === "string") {
+      if (value.toLowerCase().includes(searchTerm)) {
+        return true;
+      }
     }
   }
+  return false;
 };
 
-// Pass in Node.js but not in Visual Studio Code
+// Pass
 const getWordFrequencies = str => {
   if (str === undefined) throw new Error("str is required");
-  // Your code here!
-  let removePunctuationWord = str.replace(/[\!\,\?]/g, '');
+  let removePunctuationWord = str.replace(/[^a-zA-Z ]/g, "");
   let splitWords = removePunctuationWord.split(" ");
-  let uniqueWords = [];
+  let uniqueWords = {};
   for (let i = 0; i < splitWords.length; i++) {
     const word = splitWords[i].slice(1);
     const lowerWords = splitWords[i].charAt(0).toLowerCase();
