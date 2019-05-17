@@ -17,7 +17,7 @@ function getFillings(sandwich) {
     getFillings(sandwich);
     getFillings(sandwich2); */
 
- function isFromManchester(person) {
+  function isFromManchester(person) {
     if (person === undefined) throw new Error("person is required");
     else if
       (person.city === "Manchester")
@@ -48,25 +48,25 @@ function getFillings(sandwich) {
     if (people === undefined) throw new Error("people is required");
     // Your code here!
     let busCapacity = 40;
- if (people <= busCapacity) {
-   return 1;
- }
-   else if (people > busCapacity) {
-     return Math.ceil(people/busCapacity)
-   }
-}
+    if (people <= busCapacity) {
+      return 1;
+    }
+    else if (people > busCapacity) {
+      return Math.ceil(people / busCapacity)
+    }
+  }
 
- /*function getBusNumbers(people) {
-  if (people === undefined) throw new Error("people is required");
-  // Your code here!
- let busCapacity = 40;
- if (people <= busCapacity) {
-   return 1;
- }
-   else if (people > busCapacity) {
-     return Math.ceil(people/busCapacity)
-   }
-} */
+  /*function getBusNumbers(people) {
+   if (people === undefined) throw new Error("people is required");
+   // Your code here!
+  let busCapacity = 40;
+  if (people <= busCapacity) {
+    return 1;
+  }
+    else if (people > busCapacity) {
+      return Math.ceil(people/busCapacity)
+    }
+ } */
 
   function countSheep(arr) {
     if (!arr) throw new Error("arr is required");
@@ -83,7 +83,7 @@ function countSheep(arr) {
   }))
 };
 
-countSheep(arr);*/
+countSheep(arr); */
 
   function hasMPostCode(person) {
     if (person === undefined) throw new Error("person is required");

@@ -1,3 +1,4 @@
+// Pass
 function capitalize(word) {
   if (word === "hello") 
     return (word.charAt(0).toUpperCase() + word.slice(1));  
@@ -7,6 +8,7 @@ function capitalize(word) {
     return (word.charAt(0).toUpperCase() + word.slice(1));
 }
 
+// Pass
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
@@ -14,6 +16,7 @@ function generateInitials(firstName, lastName) {
    return (firstName.charAt(0).toUpperCase() + "." + lastName.charAt(0).toUpperCase());
 }
 
+// Pass
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
@@ -21,14 +24,16 @@ else
     return parseFloat((originalPrice + ((vatRate/100) * originalPrice)).toFixed(2))
 }
 
+// Not 79.99
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
   if (reduction === 0) return originalPrice;
   else 
-  return (originalPrice - ((reduction/100) * originalPrice))
+  return parseFloat((originalPrice - ((reduction/100) * originalPrice)).toFixed(2))
 }
 
+// Not middle 2 characters
 function getMiddleCharacter(str) {
   let length = str.length;
   let middle = length/2;
@@ -41,6 +46,7 @@ function getMiddleCharacter(str) {
   }
 }
 
+// Pass
 function reverseWord(word) {
   let x = word.split("");
   let wordbackward = (x.reverse().join(""));
@@ -53,6 +59,7 @@ function reverseWord(word) {
 } 
 }
 
+// None
 function reverseAllWords(words) {
   let stringWords = words.toString();
   let x = stringWords.split("");
@@ -64,6 +71,7 @@ function reverseAllWords(words) {
 
 }
 
+// None
 function countLinuxUsers(users) {
   const countedLinuxUsers = users.map(user => (user.type === 'Linux'));
   if (users === undefined) throw new Error("users is required");
@@ -72,6 +80,7 @@ function countLinuxUsers(users) {
   }
   }
 
+// None
 function getMeanScore(scores) {
   const meanScores = scores.reduce((total, scores) => (total / scores.length));
   if (scores === undefined) throw new Error("scores is required");
@@ -80,6 +89,7 @@ function getMeanScore(scores) {
   }
 }
 
+// Not 3 and 5
 function simpleFizzBuzz(n) {
   // for (i = 1; i < 100; i++) {
   if (n === undefined) throw new Error("n is required");

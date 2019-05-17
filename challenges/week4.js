@@ -1,3 +1,4 @@
+// Pass
 function findSmallNums(nums) {
   const smallNumbers = [];
   if (!nums) throw new Error("nums is required");
@@ -10,6 +11,7 @@ function findSmallNums(nums) {
   return smallNumbers;
 }
 
+// None
 /* Problem:
 Returns the correct names, but test says not 'to be'
 Also if statement says === "S", but how do you do a test where the expected letter can be changed to "D"? */
@@ -26,6 +28,7 @@ function findNamesBeginningWith(names, char) {
   return nameResults;
 }
 
+//Pass
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
 
@@ -40,7 +43,7 @@ function findVerbs(words) {
   return verbs;
 }
 
-
+// Pass
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   const integers = [];
@@ -52,6 +55,7 @@ function getIntegers(nums) {
   return integers;
 }
 
+// Pass
 function getCities(users) {
   if (!users) throw new Error("users is required");
   const cities = [];
@@ -63,6 +67,7 @@ function getCities(users) {
   return cities;
 }
 
+// None
 /* Problem - Not rounded to 2 decimal places. Tried .toFixed(2) */
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
@@ -74,12 +79,14 @@ function getSquareRoots(nums) {
   return squareRoots;
 }
 
+// None
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
   // Your code here
 }
 
+// Pass
 function getLongestSides(triangles) {
   if (!triangles) throw new Error("triangles is required");
   const longestTriangleSides = [];
