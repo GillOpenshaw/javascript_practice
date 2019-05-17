@@ -24,7 +24,7 @@ else
     return parseFloat((originalPrice + ((vatRate/100) * originalPrice)).toFixed(2))
 }
 
-// Not 79.99
+// Pass
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
@@ -61,14 +61,11 @@ function reverseWord(word) {
 
 // None
 function reverseAllWords(words) {
-  let stringWords = words.toString();
-  let x = stringWords.split("");
-  let reversedWords = (x.reverse().join(""));
   if (words === undefined) throw new Error("words is required");
-  if (words === ['jest']){
-    return Array.from(reversedWords);
-}
-
+  const stringWords = words.toString();
+  const splitWords = stringWords.split("");
+  const reversedString = (splitWords.reverse().join(""));
+  return (reversedString.split(",").reverse())
 }
 
 // None

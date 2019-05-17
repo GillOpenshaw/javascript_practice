@@ -4,6 +4,7 @@ function getFillings(sandwich) {
   let sandwichFilling = sandwich.fillings.map(filling => {
     return filling
   });
+}
 
   /*function getFillings(sandwich) {
       if (sandwich === undefined) throw new Error("ingredients is required");
