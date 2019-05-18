@@ -33,16 +33,18 @@ function getSalePrice(originalPrice, reduction) {
     return parseFloat((originalPrice - ((reduction / 100) * originalPrice)).toFixed(2))
 }
 
-// Not middle 2 characters
+// Pass
 function getMiddleCharacter(str) {
   let length = str.length;
-  let middle = length / 2;
-  let middle2 = middle + 1;
+  let middleCharacter = length / 2;
+  let middlePlusOne = middleCharacter + 1;
   if (str === undefined) throw new Error("str is required");
-  if (str === "bears!!!!")
-    return (str.charAt(middle));
-  if (str === "help!!") {
-    return (str.charAt(middle) + str.charAt(middle2));
+  if (length % 2 !== 0) {
+    const round = Math.floor(middleCharacter)
+    return str.charAt(round)
+  }
+  if (length % 2 === 0) {
+    return str.charAt(middleCharacter-1) + str.charAt(middlePlusOne-1);
   }
 }
 
