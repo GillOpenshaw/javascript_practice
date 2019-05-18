@@ -6,6 +6,14 @@
  */
 const sumMultiples = arr => {
   if (!arr) throw new Error("arr is required");
+  if (!Array.isArray(arr)) throw new Error("an Array is required");
+  let sumOfNumbers = 0;
+  arr.forEach(num => {
+if(num % 3 === 0 || num % 5 === 0) {
+  sumOfNumbers += num;
+}
+  });
+  return sumOfNumbers;
 };
 
 /**
@@ -49,6 +57,11 @@ const isItPrime = n => {
 const createMatrix = (n, fill) => {
   if (!n) throw new Error("n is required");
   if (!fill) throw new Error("fill is required");
+
+// complex type should return a nested array with 3 sub arrays in it
+// each sub array should have a number of values in it
+// checking the return value is equal to a a nested array
+
 };
 
 /**
@@ -66,6 +79,9 @@ const createMatrix = (n, fill) => {
 const areWeCovered = (staff, day) => {
   if (!staff) throw new Error("staff is required");
   if (!day) throw new Error("day is required");
+  if (staff.length === 0) {
+    return false;
+  }
 };
 
 module.exports = {
