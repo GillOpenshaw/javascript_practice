@@ -68,7 +68,7 @@ function reverseAllWords(words) {
   return (reversedString.split(",").reverse())
 }
 
-// None
+// Pass
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
   let count = 0;
@@ -92,20 +92,22 @@ function getMeanScore(scores) {
   return (meanScore)
 }
 
-// Not 3 and 5
+// Pass
 function simpleFizzBuzz(n) {
-  // for (i = 1; i < 100; i++) {
   if (n === undefined) throw new Error("n is required");
+  if (n % 3 == 0 && n % 5 == 0) {
+    return "fizzbuzz";
+  }
   if (n % 3 == 0) {
     return "fizz";
   }
-  if (n % 5 == 5) {
-    return "buzz'";
+  if (n % 5 == 0) {
+    return "fizz'";
   }
   if (n % 3 !== 0 && n % 5 !== 5) {
     return 4;
   }
-  if (n % 3 == 0 && n % 5 == 5) {
+  if (n % 3 == 0 && n % 5 == 0) {
     return "fizzbuzz";
   }
 }
