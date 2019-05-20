@@ -49,6 +49,10 @@ describe.only("isValidDNA", () => {
         expect(isValidDNA("C, G, T, A")).toBe(true);
     });
 
+    test("it returns true if the string includes a mixture of uppercase and lowercase c, G, t or A", () => {
+        expect(isValidDNA("C, G, T, A")).toBe(true);
+    });
+
 });
 
 xdescribe("createMatrix", () => {
