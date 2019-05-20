@@ -1,4 +1,4 @@
-const { sumMultiples, createMatrix, areWeCovered } = require("../challenges/week9");
+const { sumMultiples, isValidDNA, createMatrix, areWeCovered } = require("../challenges/week9");
 
 describe("sumMultiples", () => {
 
@@ -30,6 +30,15 @@ describe("sumMultiples", () => {
 
     test("it returns 0 if no numbers are multiples of 3 or 5", () => {
         expect(sumMultiples([1, 2, 8, 13, 7])).toBe(0);
+    });
+});
+
+describe("isValidDNA", () => {
+
+    test("it throws an error if not passed a string", () => {
+        expect(() => {
+            isValidDNA();
+        }).toThrow("str is required");
     });
 });
 
