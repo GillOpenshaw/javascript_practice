@@ -23,7 +23,10 @@ if(num % 3 === 0 || num % 5 === 0) {
  */
 const isValidDNA = str => {
   if (!str) throw new Error("str is required");
-  if (!str.typeOf(str)) throw new Error("a string is required");
+  if (typeof str !== "string") throw new Error("a string is required");
+  if (str.includes("C") || str.includes("G") || str.includes("T") || str.includes("A")) {
+    return true
+  }
 };
 
 /**

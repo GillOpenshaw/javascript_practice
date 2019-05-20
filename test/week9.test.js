@@ -1,6 +1,6 @@
 const { sumMultiples, isValidDNA, createMatrix, areWeCovered } = require("../challenges/week9");
 
-describe("sumMultiples", () => {
+xdescribe("sumMultiples", () => {
 
     test("it throws an error if not passed an array", () => {
         expect(() => {
@@ -33,16 +33,21 @@ describe("sumMultiples", () => {
     });
 });
 
-describe("isValidDNA", () => {
+describe.only("isValidDNA", () => {
 
     test("it throws an error if not passed a string", () => {
         expect(() => {
-            isValidDNA();
+            isValidDNA(false);
         }).toThrow("str is required");
     });
+
+    test("it returns true if the string includes C, G, T or A", () => {
+        expect(isValidDNA("C, G, T, A")).toBe(true);
+    });
+
 });
 
-describe("createMatrix", () => {
+xdescribe("createMatrix", () => {
 
     // first test returns 0 if passed an empty array
 
@@ -53,7 +58,7 @@ describe("createMatrix", () => {
     });
 });
 
-describe("areWeCovered", () => {
+xdescribe("areWeCovered", () => {
     test("it returns false if there are no staff at all", () => {
         expect(areWeCovered([], "Sunday")).toBe(false);
         expect(areWeCovered([], "Monday")).toBe(false);
