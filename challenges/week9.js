@@ -25,6 +25,7 @@ const isValidDNA = str => {
   if (!str) throw new Error("str is required");
   if (typeof str !== "string") throw new Error("a string is required");
   if (str.includes("C") || str.includes("G") || str.includes("T") || str.includes("A")) {
+    str.toUpperCase()
     return true
   }
 };
