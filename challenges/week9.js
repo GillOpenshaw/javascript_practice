@@ -27,6 +27,8 @@ const isValidDNA = str => {
   if (str.includes("C") || str.includes("G") || str.includes("T") || str.includes("A")) {
     str.toUpperCase()
     return true
+  } else {
+    return false
   }
 };
 
