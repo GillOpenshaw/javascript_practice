@@ -53,6 +53,10 @@ describe.only("isValidDNA", () => {
         expect(isValidDNA("C, G, T, A")).toBe(true);
     });
 
+    test("it returns true if the string includes C, G, T or A plus other letters", () => {
+        expect(isValidDNA("C, D, G, H, T, U, A, B")).toBe(true);
+    }); 
+
 });
 
 xdescribe("createMatrix", () => {
