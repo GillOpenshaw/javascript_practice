@@ -91,19 +91,32 @@ describe("isItPrime", () => {
         expect(() => {
             isItPrime(false);
         }).toThrow("n is required");
+
     });
 
-    xdescribe("createMatrix", () => {
+    test("it throws an error if not passed a string", () => {
+        expect(() => {
+            isItPrime("A");
+        }).toThrow("a number is required");
+    });
 
-        // first test returns 0 if passed an empty array
+    //test("", () => {
+    //    expect(sumMultiples([1, 2, 8, 13, 7])).toBe(0);
+    //});
 
-        it("returns a matrix of 1 + 1 when passed 1", () => {
-            const result = createMatrix(1, "foo");
-            const expected = [["foo"]];
-            expect(result).toEqual(expected);
-        });
+});
+
+xdescribe("createMatrix", () => {
+
+    // first test returns 0 if passed an empty array
+
+    it("returns a matrix of 1 + 1 when passed 1", () => {
+        const result = createMatrix(1, "foo");
+        const expected = [["foo"]];
+        expect(result).toEqual(expected);
     });
 });
+
 
 xdescribe("areWeCovered", () => {
     test("it returns false if there are no staff at all", () => {
