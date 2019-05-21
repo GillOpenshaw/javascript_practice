@@ -75,7 +75,7 @@ xdescribe("isValidDNA", () => {
 
 // In DNA, T always pairs with A, and C always pairs with G. So a string of "ACTG" would have a complementary DNA string of "TGCA".
 
-xdescribe("getComplementaryDNA", () => {
+describe("getComplementaryDNA", () => {
 
     test("it throws an error if not passed a string", () => {
         expect(() => {
@@ -83,8 +83,11 @@ xdescribe("getComplementaryDNA", () => {
         }).toThrow("str is required");
     });
 
-    test("it returns true if the string ACGT becomes complementary pair TGCA", () => {
-        expect(isValidDNA("T, G, C, A")).toBe(true);
+    test("returns the corresponding letter pair", () => {
+        expect(getComplementaryDNA("A")).toBe("T");
+        expect(getComplementaryDNA("T")).toBe("A");
+        expect(getComplementaryDNA("C")).toBe("G");
+        expect(getComplementaryDNA("G")).toBe("C");
     });
 });
 
@@ -125,21 +128,37 @@ xdescribe("createMatrix", () => {
         const expected = [["foo"]];
         expect(result).toEqual(expected);
     });
+
+    it("returns a matrix of 3 + 3 when passed 3", () => {
+        const result = createMatrix(3, "Hello");
+        const expected = [
+            ["Hello", "Hello", "Hello"],
+            ["Hello", "Hello", "Hello"],
+            ["Hello", "Hello", "Hello"]
+        ];
+        expect(result).toEqual(expected);
+    });
+
+    it("throws an error when passed 0", () => {
+        expect(() => {
+            createMatrix(0, "foo");
+        }).toThrow("n is required");
+    });
+
+    it("throws an error when passed 0", () => {
+        expect(() => {
+            createMatrix(3);
+        }).toThrow("fill is required");
+    });
 });
 
 
-describe("areWeCovered", () => {
-    test.only("it returns false if there are no staff at all", () => {
+xdescribe("areWeCovered", () => {
+    test("returns false if there are no staff at all", () => {
         expect(areWeCovered([], "Sunday")).toBe(false);
-        expect(areWeCovered([], "Monday")).toBe(false);
-        expect(areWeCovered([], "Tuesday")).toBe(false);
-        expect(areWeCovered([], "Wednesday")).toBe(false);
-        expect(areWeCovered([], "Thursday")).toBe(false);
-        expect(areWeCovered([], "Friday")).toBe(false);
-        expect(areWeCovered([], "Saturday")).toBe(false);
     });
 
-    test("return false if there are staff but < 3 are not scheduled to work", () => {
+    test("returns false if <3 staff are scheduled to work", () => {
         const staff = [
             { name: "gary", rota: ["Monday", "Tuesday"] },
             { name: "paul", rota: ["Monday", "Tuesday"] },
@@ -147,12 +166,29 @@ describe("areWeCovered", () => {
             { name: "jess", rota: ["Monday", "Tuesday"] },
         ];
         expect(areWeCovered(staff, "Wednesday")).toBe(false);
-        // Check for other days too to make sure still get false
     });
 
-    // Check what happens if there are 3 staff working makes sure returns true
+    test("returns true if >=3 staff are scheduled to work", () => {
+        const staff = [
+            { name: "gary", rota: ["Monday", "Tuesday"] },
+            { name: "paul", rota: ["Monday", "Tuesday"] },
+            { name: "sally", rota: ["Monday", "Tuesday"] },
+            { name: "jess", rota: ["Monday", "Tuesday"] },
+        ];
+        expect(areWeCovered(staff, "Monday")).toBe(true);
+    });
 
-    // Check what happens if more than 3 staff working does it still return true?
+    test("returns true if =3 staff are scheduled to work", () => {
+        const staff = [
+            { name: "gary", rota: ["Monday", "Tuesday"] },
+            { name: "paul", rota: ["Monday", "Tuesday"] },
+            { name: "sally", rota: ["Monday", "Tuesday"] },
+            { name: "jess", rota: ["Sunday", "Tuesday"] },
+        ];
+        expect(areWeCovered(staff, "Monday")).toBe(true);
+    });
+
+
 
     // if checking an array against another array, or an object against another object need to use toEqual not toBe
     // toEqual will check the values inside an array, or the key value pairs inside an object

@@ -37,8 +37,20 @@ const isValidDNA = str => {
  * @param {String} str
  * @returns {String}
  */
+// expect(isValidDNA("A")).toBe("T");
+// expect(isValidDNA("T")).toBe("A");
+// expect(isValidDNA("C")).toBe("G");
+// expect(isValidDNA("G")).toBe("C");
 const getComplementaryDNA = str => {
   if (!str) throw new Error("str is required");
+  const pairs = {
+    "A": "T",
+    "T": "A",
+    "C": "G",
+    "G": "C",
+  }
+
+  return pairs[str]
 };
 
 /**
@@ -76,6 +88,18 @@ const createMatrix = (n, fill) => {
   // each sub array should have a number of values in it
   // checking the return value is equal to a a nested array
 
+  // Check input number(n)
+  // Create n number of arrays - loop
+  const matrix = []
+  for (let i = 0; i < n; i++) {
+    const row = []
+    // Create an inner array with n fills - loop
+    for (let j = 0; j < n; j++) {
+      row.push(fill)
+    }
+    matrix.push(row)
+  }
+  return matrix;
 };
 
 /**
@@ -96,13 +120,22 @@ const areWeCovered = (staff, day) => {
   if (staff.length === 0) {
     return false;
   }
-  for (let key in staff) {
-    const value = staff[key];
-    if (typeof value === [ ]) {
-      return false
+  let staffNumbers = 0;
+  for (let index in staff) {
+    const person = staff[index];
+
+    person.rota // array with days
+    if (person.rota.includes(day)) {
+      staffNumbers += 1
     }
-}
+  }
+  if (staffNumbers >= 3) {
+    return true
+  } else {
+    return false
+  }
 };
+
 
 module.exports = {
   sumMultiples,
