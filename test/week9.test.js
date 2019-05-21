@@ -1,4 +1,4 @@
-const { sumMultiples, isValidDNA, createMatrix, areWeCovered } = require("../challenges/week9");
+const { sumMultiples, isValidDNA, getComplementaryDNA, isItPrime, createMatrix, areWeCovered } = require("../challenges/week9");
 
 xdescribe("sumMultiples", () => {
 
@@ -33,7 +33,7 @@ xdescribe("sumMultiples", () => {
     });
 });
 
-describe.only("isValidDNA", () => {
+xdescribe("isValidDNA", () => {
 
     test("it throws an error if not passed a string", () => {
         expect(() => {
@@ -49,28 +49,59 @@ describe.only("isValidDNA", () => {
         expect(isValidDNA("C, G, T, A")).toBe(true);
     });
 
-    test("it returns true if the string includes a mixture of uppercase and lowercase c, G, t or A", () => {
-        expect(isValidDNA("C, G, T, A")).toBe(true);
+    test("it returns true if the string includes a mixture of uppercase and lowercase C, G, T or A", () => {
+        expect(isValidDNA("C, g, T, a")).toBe(true);
     });
 
     test("it returns true if the string includes C, G, T or A plus other letters", () => {
         expect(isValidDNA("C, D, G, H, T, U, A, B")).toBe(true);
-    }); 
+    });
 
     test("it returns false if the string does not include any of C, G, T or A", () => {
         expect(isValidDNA("D, H, U, B")).toBe(false);
     });
 
+    // Test for an empty string
+    // Test for only 1 letter
+
+    //test("it returns false if the string is a random group of letters"), () => {
+    //  expect(isValidDNA( Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))).toBe(false);
+    //};
+
 });
 
-xdescribe("createMatrix", () => {
+// In DNA, T always pairs with A, and C always pairs with G. So a string of "ACTG" would have a complementary DNA string of "TGCA".
 
-    // first test returns 0 if passed an empty array
+xdescribe("getComplementaryDNA", () => {
 
-    it("returns a matrix of 1 + 1 when passed 1", () => {
-        const result = createMatrix(1, "foo");
-        const expected = [["foo"]];
-        expect(result).toEqual(expected);
+    test("it throws an error if not passed a string", () => {
+        expect(() => {
+            getComplementaryDNA(false);
+        }).toThrow("str is required");
+    });
+
+    test("it returns true if the string ACGT becomes complementary pair TGCA", () => {
+        expect(isValidDNA("T, G, C, A")).toBe(true);
+    });
+});
+
+describe("isItPrime", () => {
+
+    test("it throws an error if not passed a number", () => {
+        expect(() => {
+            isItPrime(false);
+        }).toThrow("n is required");
+    });
+
+    xdescribe("createMatrix", () => {
+
+        // first test returns 0 if passed an empty array
+
+        it("returns a matrix of 1 + 1 when passed 1", () => {
+            const result = createMatrix(1, "foo");
+            const expected = [["foo"]];
+            expect(result).toEqual(expected);
+        });
     });
 });
 
