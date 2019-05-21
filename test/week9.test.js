@@ -33,6 +33,8 @@ xdescribe("sumMultiples", () => {
     });
 });
 
+// Test for negative numbers
+
 xdescribe("isValidDNA", () => {
 
     test("it throws an error if not passed a string", () => {
@@ -63,6 +65,7 @@ xdescribe("isValidDNA", () => {
 
     // Test for an empty string
     // Test for only 1 letter
+    // Test ignores punctuation
 
     //test("it returns false if the string is a random group of letters"), () => {
     //  expect(isValidDNA( Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))).toBe(false);
@@ -92,19 +95,19 @@ describe("isItPrime", () => {
             isItPrime(false);
         }).toThrow("n is required");
 
-    });
-
-    test("it throws an error if not passed a string", () => {
         expect(() => {
             isItPrime("A");
         }).toThrow("a number is required");
     });
 
-    //test("", () => {
-    //    expect(sumMultiples([1, 2, 8, 13, 7])).toBe(0);
-    //});
-
+    test("returns true if receives a prime number", () => {
+       expect(isItPrime(1)).toBe(true);
+       expect(isItPrime(1, 2, 3, 5, 7, 11, 13, 17, 19)).toBe(true);
+    });
 });
+
+// Test for decimal number
+// Test for negative number
 
 xdescribe("createMatrix", () => {
 

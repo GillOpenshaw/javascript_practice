@@ -9,9 +9,9 @@ const sumMultiples = arr => {
   if (!Array.isArray(arr)) throw new Error("an Array is required");
   let sumOfNumbers = 0;
   arr.forEach(num => {
-if(num % 3 === 0 || num % 5 === 0) {
-  sumOfNumbers += num;
-}
+    if (num % 3 === 0 || num % 5 === 0) {
+      sumOfNumbers += num;
+    }
   });
   return sumOfNumbers;
 };
@@ -49,7 +49,12 @@ const getComplementaryDNA = str => {
 const isItPrime = n => {
   if (!n) throw new Error("n is required");
   if (typeof n !== "number") throw new Error("a number is required");
-};
+  for(let i = 0; i < n; i++)
+  if(n % i === 0) return false;
+   return true;
+  };
+
+
 
 /**
  * This function should receive a number and return an array of n arrays, each filled with n items. The parameter "fill" should be used as the filler of the arrays. For example, given parameters 3 and "foo" the resulting matrix should be:
@@ -66,9 +71,9 @@ const createMatrix = (n, fill) => {
   if (!n) throw new Error("n is required");
   if (!fill) throw new Error("fill is required");
 
-// complex type should return a nested array with 3 sub arrays in it
-// each sub array should have a number of values in it
-// checking the return value is equal to a a nested array
+  // complex type should return a nested array with 3 sub arrays in it
+  // each sub array should have a number of values in it
+  // checking the return value is equal to a a nested array
 
 };
 
