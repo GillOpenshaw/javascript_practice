@@ -88,7 +88,7 @@ xdescribe("getComplementaryDNA", () => {
     });
 });
 
-describe("isItPrime", () => {
+xdescribe("isItPrime", () => {
 
     test("it throws an error if not passed a number", () => {
         expect(() => {
@@ -128,8 +128,8 @@ xdescribe("createMatrix", () => {
 });
 
 
-xdescribe("areWeCovered", () => {
-    test("it returns false if there are no staff at all", () => {
+describe("areWeCovered", () => {
+    test.only("it returns false if there are no staff at all", () => {
         expect(areWeCovered([], "Sunday")).toBe(false);
         expect(areWeCovered([], "Monday")).toBe(false);
         expect(areWeCovered([], "Tuesday")).toBe(false);

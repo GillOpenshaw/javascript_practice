@@ -49,11 +49,11 @@ const getComplementaryDNA = str => {
 const isItPrime = n => {
   if (!n) throw new Error("n is required");
   if (typeof n !== "number") throw new Error("a number is required");
-  if (n<=1) return false;
-  for(let i = 2; i < n; i++)
-  if(n % i === 0) return false;
-   return true;
-  };
+  if (n <= 1) return false;
+  for (let i = 2; i < n; i++)
+    if (n % i === 0) return false;
+  return true;
+};
 
 
 
@@ -96,6 +96,12 @@ const areWeCovered = (staff, day) => {
   if (staff.length === 0) {
     return false;
   }
+  for (let key in staff) {
+    const value = staff[key];
+    if (typeof value === [ ]) {
+      return false
+    }
+}
 };
 
 module.exports = {
