@@ -101,9 +101,13 @@ describe("isItPrime", () => {
     });
 
     test("returns true if receives a prime number", () => {
-       expect(isItPrime(1)).toBe(true);
-       expect(isItPrime(1, 2, 3, 5, 7, 11, 13, 17, 19)).toBe(true);
+       expect(isItPrime(13)).toBe(true);
+       expect(isItPrime(2, 3, 5, 11, 13, 19)).toBe(true);
     });
+
+    test("returns false if receives a negative number", () => {
+        expect(isItPrime(-3)).toBe(false);
+     });
 });
 
 // Test for decimal number
