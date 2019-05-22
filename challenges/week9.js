@@ -43,14 +43,15 @@ const isValidDNA = str => {
 // expect(isValidDNA("G")).toBe("C");
 const getComplementaryDNA = str => {
   if (!str) throw new Error("str is required");
+  const strSplit = str.split("");
   const pairs = {
-    "A": "T",
-    "T": "A",
-    "C": "G",
-    "G": "C",
-  }
-
-  return pairs[str]
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C",
+  };
+const complementaryPairs = strSplit.map = (char => pairs[char]);
+ return complementaryPairs.join("");
 };
 
 /**

@@ -89,6 +89,10 @@ describe("getComplementaryDNA", () => {
         expect(getComplementaryDNA("C")).toBe("G");
         expect(getComplementaryDNA("G")).toBe("C");
     });
+
+    test("returns the corresponding letter pair", () => {
+        expect(getComplementaryDNA("ACTG")).toBe("TGCA");
+    });
 });
 
 xdescribe("isItPrime", () => {
