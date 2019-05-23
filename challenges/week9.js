@@ -50,7 +50,7 @@ const getComplementaryDNA = str => {
     C: "G",
     G: "C",
   };
-const complementaryPairs = strSplit.map = (char => pairs[char]);
+const complementaryPairs = strSplit.map(char => pairs[char]);
  return complementaryPairs.join("");
 };
 

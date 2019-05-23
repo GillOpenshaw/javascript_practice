@@ -73,7 +73,7 @@ xdescribe("isValidDNA", () => {
 
 });
 
-// In DNA, T always pairs with A, and C always pairs with G. So a string of "ACTG" would have a complementary DNA string of "TGCA".
+// In DNA, T always pairs with A, and C always pairs with G. So a string of "ACTG" would have a complementary DNA string of "TGAC".
 
 describe("getComplementaryDNA", () => {
 
@@ -91,7 +91,7 @@ describe("getComplementaryDNA", () => {
     });
 
     test("returns the corresponding letter pair", () => {
-        expect(getComplementaryDNA("ACTG")).toBe("TGCA");
+        expect(getComplementaryDNA("ACTG")).toBe("TGAC");
     });
 });
 
