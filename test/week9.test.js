@@ -75,7 +75,7 @@ xdescribe("isValidDNA", () => {
 
 // In DNA, T always pairs with A, and C always pairs with G. So a string of "ACTG" would have a complementary DNA string of "TGAC".
 
-describe("getComplementaryDNA", () => {
+xdescribe("getComplementaryDNA", () => {
 
     test("it throws an error if not passed a string", () => {
         expect(() => {

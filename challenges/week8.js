@@ -5,7 +5,6 @@ const findNextNumber = (nums, n) => {
   const indexLast = nums.length - 1
   if (nums === undefined) throw new Error("nums is required");
   if (n === undefined) throw new Error("n is required");
-  // Your code here! 
   if (nums.indexOf(n) === -1) {
     return null;
   }
@@ -16,14 +15,14 @@ const findNextNumber = (nums, n) => {
 };
 
 // Pass
+// Create a variable ones and set to 0
+// Create a variable zeros and set to 0
+// Loop through checking for 1s and os
+// If a 1 (String) is found add 1 to variable ones
+// If a 0 (String) is found add 1 to variable zeros
+// Return ones and zeros as an array
 const count1sand0s = str => {
   if (str === undefined) throw new Error("str is required");
-  // Create a variable ones and set to 0
-  // Create a variable zeros and set to 0
-  // Loop through checking for 1s and os
-  // If a 1 (String) is found add 1 to variable ones
-  // If a 0 (String) is found add 1 to variable zeros
-  // Return ones and zeros as an array
   let ones = 0;
   let zeros = 0;
   for (let i = 0; i < str.length; i++) {
@@ -42,28 +41,26 @@ const count1sand0s = str => {
 };
 
 // Pass
+// Convert number to string so it can be split
+// Split the string elements
+// Reverse the string
+// Join the string elements together
+// Convert the string back to a number
+// Return the number
 const reverseNumber = n => {
   if (n === undefined) throw new Error("n is required");
-  // Your code here!
-  // Convert number to string so it can be split
-  // Split the string elements
-  // Reverse the string
-  // Join the string elements together
-  // Convert the string back to a number
-  // Return the number
   const numberReversed = parseFloat(n.toString().split('').reverse().join(''))
   return numberReversed
 };
 
 // Pass
+// Set variable nums to 0 using let as the variable value will change
+// Loop through arrays
+// Loop through inner arrays
+// As each loop passes through add the item to the variable nums
+// Return nums
 const sumArrays = arrs => {
   if (arrs === undefined) throw new Error("arrs is required");
-  // Your code here!
-  // Set variable nums to 0 using let as the variable value will change
-  // Loop through arrays
-  // Loop through inner arrays
-  // As each loop passes through add the item to the variable nums
-  // Return nums
   let nums = 0
   arrs.forEach(innerArr => {
     innerArr.forEach(item => {
@@ -74,15 +71,15 @@ const sumArrays = arrs => {
 };
 
 // Pass
+// Your code here!
+// If array length is less than 2, return the original array
+// Save first item to a variable firstItem using .shift()
+// Save last item to a variable lastItem using .pop()
+// Add the lastItem to the first position using .unshift()
+// Add the firstItem to the last position using .push()
+// Return the array
 const arrShift = arr => {
   if (arr === undefined) throw new Error("arr is required");
-  // Your code here!
-  // If array length is less than 2, return the original array
-  // Save first item to a variable firstItem using .shift()
-  // Save last item to a variable lastItem using .pop()
-  // Add the lastItem to the first position using .unshift()
-  // Add the firstItem to the last position using .push()
-  // Return the array
   if (arr.length < 2) {
     return arr
   }

@@ -1,7 +1,6 @@
 // Pass
 function getSquares(nums) {
   if (!nums) throw new Error("nums is required");
-  // Your code here!
   const squaredNums = nums.map(function (num) {
     return num * num
   });
@@ -71,7 +70,6 @@ function checkIngredients(menu, ingredient) {
 function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
-  // Your code here!
   else {
     const arr3 =[];
     arr1.forEach(function(num) {

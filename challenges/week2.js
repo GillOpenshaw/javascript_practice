@@ -1,103 +1,57 @@
+// Pass
 function getFillings(sandwich) {
   if (sandwich === undefined) throw new Error("ingredients is required");
-  // Your code here!
-  let sandwichFilling = sandwich.fillings.map(filling => {
-    return filling
-  });
+  const filling = sandwich.fillings
+  return (filling)
 }
 
-  /*function getFillings(sandwich) {
-      if (sandwich === undefined) throw new Error("ingredients is required");
-       //Your code here!
-      let sandwichFilling = sandwich.fillings.map (filling => {
-       return filling 
-      })
-      console.log(sandwichFilling);
-    };  
-    
-    getFillings(sandwich);
-    getFillings(sandwich2); */
+// Pass
+function isFromManchester(person) {
+  if (person === undefined) throw new Error("person is required");
+  else if
+    (person.city === "Manchester")
+    return true;
+  else if
+    (person.city != "Manchester")
+    return false;
+}
 
-  function isFromManchester(person) {
-    if (person === undefined) throw new Error("person is required");
-    else if
-      (person.city === "Manchester")
-      return true;
-    else if
-      (person.city != "Manchester")
-      return false;
-  };
-
-  /*const person = {
-        name: "Mohammed",
-        city: "Manchester",
-        age: 23
-      };
-     expect(isFromManchester(person)).toBe(true)//;
-   // );
-  
-  function isFromManchester(person) {
-    if (person === undefined) throw new Error("person is required");
-    else if 
-    (person.city === "Manchester") 
-        return true;
-  };
-  
-  isFromManchester(person);*/
-
-  function getBusNumbers(people) {
-    if (people === undefined) throw new Error("people is required");
-    // Your code here!
-    let busCapacity = 40;
-    if (people <= busCapacity) {
-      return 1;
-    }
-    else if (people > busCapacity) {
-      return Math.ceil(people / busCapacity)
-    }
-  }
-
-  /*function getBusNumbers(people) {
-   if (people === undefined) throw new Error("people is required");
-   // Your code here!
+// Pass
+function getBusNumbers(people) {
+  if (people === undefined) throw new Error("people is required");
   let busCapacity = 40;
   if (people <= busCapacity) {
     return 1;
   }
-    else if (people > busCapacity) {
-      return Math.ceil(people/busCapacity)
-    }
- } */
-
-  function countSheep(arr) {
-    if (!arr) throw new Error("arr is required");
-    // Your code here!
+  else if (people > busCapacity) {
+    return Math.ceil(people / busCapacity)
   }
+}
 
-  /* let count = 0;
+// Pass
 function countSheep(arr) {
-    if (!arr) throw new Error("arr is required");
-    else if
-     (arr.forEach(function(sheep){
-      let countedSheep = count +=
-        return countedSheep
-  }))
+  if (!arr) throw new Error("arr is required");
+  let count = 0;
+  arr.forEach(item => {
+    if (item === "sheep") {
+      count++
+    }
+  })
+  return count;
+}
+
+function hasMPostCode(person) {
+  if (person === undefined) throw new Error("person is required");
+  const firstLetter = person.address.postCode[0];
+  const secondLetter = person.address.postCode[1];
+  const isAplha = isNaN(Number(secondLetter));
+  return firstLetter === "M" && !isAplha; 
+}
+
+module.exports = {
+  getFillings,
+  isFromManchester,
+  countSheep,
+  getBusNumbers,
+  hasMPostCode
 };
-
-countSheep(arr); */
-
-  function hasMPostCode(person) {
-    if (person === undefined) throw new Error("person is required");
-    const firstLetter = person.address.postcode[0];
-    const secondLetter = person.address.postcode[1];
-    const isAlphabeticLetter = isNan(secondLetter);
-    return firstLetter === "M" && !isAlphabeticLetter;
-  }
-
-  module.exports = {
-    getFillings,
-    isFromManchester,
-    countSheep,
-    getBusNumbers,
-    hasMPostCode
-  };
