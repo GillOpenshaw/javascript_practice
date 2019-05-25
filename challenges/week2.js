@@ -40,12 +40,13 @@ function countSheep(arr) {
   return count;
 }
 
+// Pass
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   const firstLetter = person.address.postCode[0];
   const secondLetter = person.address.postCode[1];
   const isAplha = isNaN(Number(secondLetter));
-  return firstLetter === "M" && !isAplha; 
+  return firstLetter === "M" && !isAplha;
 }
 
 module.exports = {
