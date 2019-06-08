@@ -10,7 +10,7 @@ function getSquares(nums) {
 // None
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
-  
+
 }
 
 /*// const letters = ["Mother", "Father"];
@@ -36,36 +36,36 @@ console.log(joinedWords);*/
   console.log(capitaliseLetters);*/
 
 // None
-  function getTotalSubjects(people) {
+function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
-/* 
-let countedSubjects = 0;
-people.forEach(function(peopleInfo){ 
-countedSubjects = peopleInfo.subjects;
-if(peopleInfo.subjects !== null){
-  countedSubjects ++
+  /* 
+  let countedSubjects = 0;
+  people.forEach(function(peopleInfo){ 
+  countedSubjects = peopleInfo.subjects;
+  if(peopleInfo.subjects !== null){
+    countedSubjects ++
+  }
+  else countedSubjects = 0
+  })
+  return countedSubjects; 
+  } */
 }
-else countedSubjects = 0
-})
-return countedSubjects; 
-} */
-}
- 
-// None
+
+// Pass
 function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
-let foundFoodItem = false;
+  let foundFoodItem = false;
 
-menu.forEach(function (menuItem) {
-menuItem.ingredients.forEach(function (menuIngredient) {
-if (menuIngredient === ingredient) {
-  foundFoodItem = true;
-}
-})
-})
-return foundFoodItem;
+  menu.forEach(function (menuItem) {
+    menuItem.ingredients.forEach(function (menuIngredient) {
+      if (menuIngredient === ingredient) {
+        foundFoodItem = true;
+      }
+    })
+  })
+  return foundFoodItem;
 }
 
 
@@ -74,9 +74,9 @@ function duplicateNumbers(arr1, arr2) {
   if (!arr1) throw new Error("arr1 is required");
   if (!arr2) throw new Error("arr2 is required");
   else {
-    const arr3 =[];
-    arr1.forEach(function(num) {
-      if (arr2.includes(num) && !arr3.includes(num)){
+    const arr3 = [];
+    arr1.forEach(function (num) {
+      if (arr2.includes(num) && !arr3.includes(num)) {
         arr3.push(num)
       }
     })
