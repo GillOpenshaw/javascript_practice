@@ -10,7 +10,7 @@ function getSquares(nums) {
 // None
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
-  // Your code here!
+  
 }
 
 /*// const letters = ["Mother", "Father"];
@@ -56,15 +56,18 @@ function checkIngredients(menu, ingredient) {
   if (!menu) throw new Error("menu is required");
   if (!ingredient) throw new Error("ingredient is required");
   // Your code here!
+let foundFoodItem = false;
 
+menu.forEach(function (menuItem) {
+menuItem.ingredients.forEach(function (menuIngredient) {
+if (menuIngredient === ingredient) {
+  foundFoodItem = true;
 }
-/* function checkIngredients(menu, ingredient) {
-  if (!menu) throw new Error("menu is required");
-  if (!ingredient) throw new Error("ingredient is required");
-  if (this.ingredient === "dark chocolate") {
-   return true;
- }
-} */
+})
+})
+return foundFoodItem;
+}
+
 
 // Pass
 function duplicateNumbers(arr1, arr2) {

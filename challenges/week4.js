@@ -19,13 +19,13 @@ function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
   // Your code here
-  const nameResults = [];
-  names.map(function (firstLetter) {
-    if (firstLetter[0] === "S") {
-      nameResults.push(firstLetter);
+  const namesBeginningWith = [];
+  names.forEach(function(char, letter) {
+    if (char[0] === letter) {
+      namesBeginningWith.push(char)
     }
   })
-  return nameResults;
+  return (namesBeginningWith)
 }
 
 //Pass
@@ -73,7 +73,7 @@ function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   const squareRoots = [];
   nums.forEach(function(num) {
-    const squareRoot = Math.sqrt(num);
+    const squareRoot = Math.sqrt(num).toFixed(2);
     squareRoots.push(squareRoot);
   });
   return squareRoots;
