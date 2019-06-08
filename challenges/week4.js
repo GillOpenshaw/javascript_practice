@@ -18,14 +18,15 @@ Also if statement says === "S", but how do you do a test where the expected lett
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
-  // Your code here
+
   const namesBeginningWith = [];
-  names.forEach(function(char, letter) {
-    if (char[0] === letter) {
-      namesBeginningWith.push(char)
+
+  names.forEach(function (name) {
+    if (char === name[0]) {
+      namesBeginningWith.push(name)
     }
   })
-  return (namesBeginningWith)
+  return namesBeginningWith
 }
 
 //Pass
@@ -34,7 +35,7 @@ function findVerbs(words) {
 
   const verbs = [];
   //for (let i = 0; i < words.length; i++) {
-    words.forEach(function(word){
+  words.forEach(function (word) {
     const first3Chars = word.slice(0, 3);
     if (first3Chars === "to ") {
       verbs.push(word);
@@ -47,7 +48,7 @@ function findVerbs(words) {
 function getIntegers(nums) {
   if (!nums) throw new Error("nums is required");
   const integers = [];
-  nums.forEach(function(num) {
+  nums.forEach(function (num) {
     if (Number.isInteger(num)) {
       integers.push(num)
     }
@@ -72,7 +73,7 @@ function getCities(users) {
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   const squareRoots = [];
-  nums.forEach(function(num) {
+  nums.forEach(function (num) {
     const squareRoot = Math.sqrt(num).toFixed(2);
     squareRoots.push(squareRoot);
   });
