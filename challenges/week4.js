@@ -11,10 +11,7 @@ function findSmallNums(nums) {
   return smallNumbers;
 }
 
-// None
-/* Problem:
-Returns the correct names, but test says not 'to be'
-Also if statement says === "S", but how do you do a test where the expected letter can be changed to "D"? */
+// Pass
 function findNamesBeginningWith(names, char) {
   if (!names) throw new Error("names is required");
   if (!char) throw new Error("char is required");
@@ -84,7 +81,16 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
-  // Your code here
+  let foundSentence = [];
+  sentences.forEach(function (words) {
+
+    //let lowerCaseWords = words.charAt(0).toLowerCase() + words.slice(1)
+
+    if (words.includes(str)) {
+      foundSentence.push(words)
+    }
+  })
+  return (foundSentence)
 }
 
 // Pass

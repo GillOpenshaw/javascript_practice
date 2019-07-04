@@ -10,30 +10,29 @@ function getSquares(nums) {
 // None
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
-
+  let newWord = [];
+  let joinedWord = "";
+  console.log(words.length);
+  words.forEach(function(word, index) {
+    if (words.length === 1) {
+      joinedWord = word.charAt(0).toLowerCase() + word.slice(1);
+      newWord.push(joinedWord);
+      
+    }
+    if (words.length > 1) {
+      if (index == 0) {
+        joinedWord = word.charAt(0).toLowerCase() + word.slice(1);
+        newWord.push(joinedWord);
+      }
+      if (index >= 1) {
+        joinedWord = word.charAt(0).toUpperCase() + word.slice(1);
+        newWord.push(joinedWord);   
+      }
+    }
+  })
+  return(newWord.join(""));
 }
 
-/*// const letters = ["Mother", "Father"];
-const letters = ["my", "variable"];
-
-/* firstCharacter = letters[0][0].toLowerCase();
- console.log(firstCharacter);
-restOfFirstWord = letters[0].slice(1);
-console.log(restOfFirstWord);
-firstJoined = firstCharacter + restOfFirstWord;
-console.log(firstJoined);
-capitaliseLetters = letters[1].slice(0,1).toUpperCase();
-console.log(capitaliseLetters);
-restOfLetters = letters[1].slice(1);
-secondJoined = capitaliseLetters + restOfLetters;
-console.log(secondJoined);
-joinedWords = firstJoined + secondJoined;
-console.log(joinedWords);*/
-
-/*letters.forEach(item, index => {
-  capitaliseLetters = letters[1].slice(0,1).toUpperCase()
-  }
-  console.log(capitaliseLetters);*/
 
 // None
 function getTotalSubjects(people) {

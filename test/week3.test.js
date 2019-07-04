@@ -6,7 +6,7 @@ const {
   duplicateNumbers
 } = require("../challenges/week3");
 
-xdescribe("camelCaseWords", () => {
+describe.only("camelCaseWords", () => {
   test("camel cases a single word (i.e. no capital letter at beginning)", () => {
     expect(camelCaseWords(["my"])).toBe("my");
   });
@@ -74,7 +74,7 @@ xdescribe("getTotalSubjects", () => {
 });
 
 
-describe("checkIngredients", () => {
+xdescribe("checkIngredients", () => {
   test("returns false if no menu items include the specified ingredient", () => {
     const menu = [
       {
