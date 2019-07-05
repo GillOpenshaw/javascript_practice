@@ -26,7 +26,7 @@ function findNamesBeginningWith(names, char) {
   return namesBeginningWith
 }
 
-//Pass
+// Pass
 function findVerbs(words) {
   if (!words) throw new Error("words is required");
 
@@ -65,8 +65,7 @@ function getCities(users) {
   return cities;
 }
 
-// None
-/* Problem - Not rounded to 2 decimal places. Tried .toFixed(2) */
+// Pass
 function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   const squareRoots = [];
@@ -77,7 +76,7 @@ function getSquareRoots(nums) {
   return squareRoots;
 }
 
-// None
+// Pass
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
