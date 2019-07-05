@@ -71,7 +71,7 @@ function getSquareRoots(nums) {
   if (!nums) throw new Error("nums is required");
   const squareRoots = [];
   nums.forEach(function (num) {
-    const squareRoot = Math.sqrt(num).toFixed(2);
+    const squareRoot = Number(Math.sqrt(num).toFixed(2));
     squareRoots.push(squareRoot);
   });
   return squareRoots;
@@ -81,13 +81,12 @@ function getSquareRoots(nums) {
 function findSentencesContaining(sentences, str) {
   if (!sentences) throw new Error("sentences is required");
   if (!str) throw new Error("str is required");
+  if (!str) throw new Error("str is required");
   let foundSentence = [];
-  sentences.forEach(function (words) {
-
-    //let lowerCaseWords = words.charAt(0).toLowerCase() + words.slice(1)
-
-    if (words.includes(str)) {
-      foundSentence.push(words)
+  sentences.forEach(function(sentence) {
+    let sentenceCase = sentence.toLowerCase()
+    if (sentenceCase.includes(str)) {
+      foundSentence.push(sentence)
     }
   })
   return (foundSentence)

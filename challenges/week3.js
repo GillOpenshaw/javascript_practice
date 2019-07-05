@@ -7,17 +7,15 @@ function getSquares(nums) {
   return squaredNums;
 }
 
-// None
+// Pass
 function camelCaseWords(words) {
   if (!words) throw new Error("words is required");
   let newWord = [];
   let joinedWord = "";
-  console.log(words.length);
-  words.forEach(function(word, index) {
+  words.forEach(function (word, index) {
     if (words.length === 1) {
       joinedWord = word.charAt(0).toLowerCase() + word.slice(1);
       newWord.push(joinedWord);
-      
     }
     if (words.length > 1) {
       if (index == 0) {
@@ -26,29 +24,24 @@ function camelCaseWords(words) {
       }
       if (index >= 1) {
         joinedWord = word.charAt(0).toUpperCase() + word.slice(1);
-        newWord.push(joinedWord);   
+        newWord.push(joinedWord);
       }
     }
   })
-  return(newWord.join(""));
+  return (newWord.join(""));
 }
 
 
-// None
+// Pass
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
-  /* 
-  let countedSubjects = 0;
-  people.forEach(function(peopleInfo){ 
-  countedSubjects = peopleInfo.subjects;
-  if(peopleInfo.subjects !== null){
-    countedSubjects ++
-  }
-  else countedSubjects = 0
-  })
-  return countedSubjects; 
-  } */
+  let numberOfTotalSubjects = 0
+  people.forEach(function(data) {
+  numberOfTotalSubjects += data.subjects.length
+})
+return numberOfTotalSubjects;
 }
+
 
 // Pass
 function checkIngredients(menu, ingredient) {
