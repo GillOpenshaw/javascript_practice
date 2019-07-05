@@ -36,10 +36,10 @@ function camelCaseWords(words) {
 function getTotalSubjects(people) {
   if (!people) throw new Error("people is required");
   let numberOfTotalSubjects = 0
-  people.forEach(function(data) {
-  numberOfTotalSubjects += data.subjects.length
-})
-return numberOfTotalSubjects;
+  people.forEach(function (data) {
+    numberOfTotalSubjects += data.subjects.length
+  })
+  return numberOfTotalSubjects;
 }
 
 

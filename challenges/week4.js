@@ -82,7 +82,7 @@ function findSentencesContaining(sentences, str) {
   if (!str) throw new Error("str is required");
   if (!str) throw new Error("str is required");
   let foundSentence = [];
-  sentences.forEach(function(sentence) {
+  sentences.forEach(function (sentence) {
     let sentenceCase = sentence.toLowerCase()
     if (sentenceCase.includes(str)) {
       foundSentence.push(sentence)
